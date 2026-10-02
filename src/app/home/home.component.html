@@ -1,0 +1,64 @@
+<section>
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <img src="assets/images/Logo.svg" alt="Logo" class="logo" />
+      <p>Design Guild</p>
+    </div>
+    <div class="headerRight">
+      <form>
+        <div class="formFormat">
+          <p for="email">Email</p>
+          <input
+            id="email"
+            required
+            type="email"
+            placeholder="Ej. ejemplo@correo.com"
+          />
+        </div>
+        <div class="formFormat">
+          <p for="password">Password</p>
+          <input id="password" required type="password" />
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      <a href="">Forgot password?</a>
+    </div>
+  </div>
+
+  <!-- Main content-->
+  <div class="main">
+    <div class="left">
+      <div class="title">
+        <p>Welcome to Design Guild</p>
+        <p class="titleTitle">
+          Join the world’s largest community for designers
+        </p>
+      </div>
+      <div class="recentLogins">
+        <p>Recent Logins</p>
+        <div class="recentLoginsList">
+          <button *ngFor="let logins of recentLoginsObj">
+            <img [src]="logins.img" />
+            {{ logins.name }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right content -->
+    <div class="right">
+      <div class="join">
+        <p class="joinSubtitle">Join our community today</p>
+        <p>Get connected, find designers to start a project</p>
+      </div>
+      <button class="buttoncini">Sign Up</button>
+      <div class="downSignUp">
+        <p>Or, login with</p>
+        <div class="buttonFormat">
+          <button *ngFor="let social of socialObj">{{ social.name }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
